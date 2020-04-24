@@ -2,6 +2,11 @@
 version: '3.0'
 services:
   web:
+    image: tomsia1/io-lab-docker-ci-public:v1.0
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
     # TODO: image, ports and redis dependency
     environment:
       REDIS_HOST: redis
